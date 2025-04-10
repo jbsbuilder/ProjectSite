@@ -24,5 +24,8 @@ const items = ref<NavigationMenuItem[][]>([
 </script>
 
 <template>
-    <UNavigationMenu color="primary" :items="items" class="w-full flex justify-center" />
+    <div class="fixed top-0 w-full z-50 shadow-sm">
+        <UNavigationMenu color="primary" :items="items" class="w-full flex justify-center" />
+    </div>
+    <div class="h-16"></div> <!-- Spacer to prevent content from hiding behind the navbar -->
 </template>

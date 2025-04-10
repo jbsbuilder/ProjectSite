@@ -6,14 +6,19 @@
     "cypress.config.*",
     "nightwatch.conf.*",
     "playwright.config.*",
-    "eslint.config.*"
+    "eslint.config.*",
+    "vite.config.ts"
   ],
   "compilerOptions": {
-    "noEmit": true,
+    "noEmit": false,
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo",
-
     "module": "ESNext",
-    "moduleResolution": "Bundler",
-    "types": ["node"]
+    "moduleResolution": "bundler",
+    "types": ["node"],
+    "composite": true,
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "declarationMap": true
   }
 }
